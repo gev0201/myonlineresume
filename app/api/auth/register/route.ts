@@ -39,6 +39,19 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Check if phone already exists
+    const phoneCheck = await pool.query(
+      'SELECT "Id" FROM "Users" WHERE "Phone" = $1',
+      [phone]
+    );
+
+    if (phoneCheck.rows.length > 0) {
+      return NextResponse.json(
+        { success: false, errors: { phone: 'Phone number already registered' } },
+        { status: 400 }
+      );
+    }
+
     // Start transaction
     const client = await pool.connect();
     
