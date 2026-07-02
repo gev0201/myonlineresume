@@ -15,28 +15,30 @@
   --sans: 'DM Sans', sans-serif;
 }
 
-* { 
-  box-sizing: border-box; 
-  margin: 0; 
-  padding: 0; 
-}
+@layer base {
+  * { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+  }
 
-html { 
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  html { 
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-body {
-  font-family: var(--sans);
-  background: var(--bg);
-  color: var(--txt);
-  line-height: 1.6;
-  overflow-x: hidden;
-}
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--txt);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-.font-serif { 
-  font-family: var(--serif) !important; 
+  .font-serif { 
+    font-family: var(--serif) !important; 
+  }
 }
 
 @keyframes fadeInUp {

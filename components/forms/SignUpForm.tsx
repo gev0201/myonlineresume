@@ -61,8 +61,7 @@ export default function SignUpForm() {
       formData.phone.trim() !== "" &&
       formData.password.length >= 8 &&
       formData.confirmPassword.length >= 8 &&
-      formData.password === formData.confirmPassword &&
-      formData.agreeToTerms
+      formData.password === formData.confirmPassword
     );
   };
 
@@ -249,6 +248,7 @@ export default function SignUpForm() {
         )}
       </div>
 
+      {/* TODO: Re-enable when Terms of Service and Privacy Policy pages are ready
       <div className="flex items-start gap-2.5 pt-1">
         <input
           type="checkbox"
@@ -275,6 +275,7 @@ export default function SignUpForm() {
           </Link>
         </label>
       </div>
+      */}
 
       <button
         type="submit"

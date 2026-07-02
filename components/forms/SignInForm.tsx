@@ -116,20 +116,6 @@ export default function SignInForm() {
         />
       </div>
 
-      <div className="flex items-center gap-2 pt-1">
-        <input
-          type="checkbox"
-          id="remember"
-          name="rememberMe"
-          checked={formData.rememberMe}
-          onChange={handleChange}
-          className="rounded"
-        />
-        <label htmlFor="remember" className="text-sm text-[var(--txt2)]">
-          Remember me for 30 days
-        </label>
-      </div>
-
       <button
         type="submit"
         disabled={isSubmitting}

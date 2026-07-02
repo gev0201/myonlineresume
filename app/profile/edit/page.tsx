@@ -9,6 +9,7 @@ import EducationSection from "@/components/profile/EducationSection";
 import SkillsSection from "@/components/profile/SkillsSection";
 import CertificatesSection from "@/components/profile/CertificatesSection";
 import LanguagesSection from "@/components/profile/LanguagesSection";
+import ChangePasswordSection from "@/components/profile/ChangePasswordSection";
 
 interface User {
   id: number;
@@ -307,6 +308,9 @@ export default function ProfileEditPage() {
                 className="w-full px-4 py-3 border-2 border-[var(--border)] rounded-xl focus:outline-none focus:border-[var(--accent)] resize-none"
               />
             </div>
+
+            {/* Change Password */}
+            {user && <ChangePasswordSection userId={user.id} />}
 
             {/* Save Button */}
             <div className="flex justify-end gap-4">

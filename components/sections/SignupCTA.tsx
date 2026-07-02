@@ -13,7 +13,7 @@ export default function SignupCTA() {
           Ready to build your resume?
         </h2>
         <p className="text-white/80 text-base md:text-lg mb-8 leading-relaxed text-center w-full">
-          Join thousands of professionals who landed their dream jobs with MyOnlineResume.am
+          Build your professional online presence and get noticed by recruiters with MyOnlineResume.am
         </p>
         <Link
           href="/sign-up"

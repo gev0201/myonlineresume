@@ -11,8 +11,7 @@ export const metadata: Metadata = {
 const perks = [
   "Free resume builder — no credit card needed",
   "Public profile URL at myonlineresume.am/you",
-  "PDF export included on all plans",
-  "Upgrade or cancel anytime",
+  "Export your resume as PDF",
 ];
 
 export default function SignUpPage() {
@@ -31,7 +30,7 @@ export default function SignUpPage() {
               Your career starts<br />with a great profile
             </h2>
             <p className="text-[var(--txt2)] leading-relaxed mb-8 text-sm">
-              Thousands of Armenian professionals have already built their online presence with MyOnlineResume.am. It takes less than 5 minutes.
+              Create your professional online presence with MyOnlineResume.am and get noticed by recruiters. It takes less than 5 minutes.
             </p>
             <ul className="space-y-3">
               {perks.map((perk) => (
@@ -52,7 +51,6 @@ export default function SignUpPage() {
                 MyOnline<span className="text-[var(--amber)]">Resume</span>.am
               </Link>
               <h1 className="font-serif text-3xl tracking-tight mb-1">Create your account</h1>
-              <p className="text-sm text-[var(--txt2)]">Free forever. Upgrade when you&apos;re ready.</p>
             </div>
 
             <SignUpForm />
