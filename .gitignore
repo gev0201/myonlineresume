@@ -40,14 +40,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# cPanel deployment files (not needed for Vercel)
-deploy/
-deploy-fixed/
-*.zip
-app.js
-deploy-package.js
-deploy-package-fixed.js
-package-minimal.json
+# cPanel deployment files
+cpanel-deploy/
+myonlineresume-cpanel.zip
+create-deploy.js
 
 # IDE
 .idea/
