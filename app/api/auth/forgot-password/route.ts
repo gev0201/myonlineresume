@@ -37,12 +37,14 @@ export async function POST(request: NextRequest) {
     const tempPassword = generateTempPassword();
     const hash = await bcrypt.hash(tempPassword, 12);
 
-    await pool.query(
-      'UPDATE "Secret" SET "PassHash" = $1, "UpdatedAt" = CURRENT_TIMESTAMP WHERE "UserId" = $2',
-      [hash, user.Id]
-    );
-
+    // Send the email first: if SMTP fails the account password is left untouched
     await sendPasswordResetEmail(user.Email, user.FirstName, tempPassword);
+
+    await pool.query(
+      `INSERT INTO "Secret" ("UserId", "PassHash") VALUES ($1, $2)
+       ON CONFLICT ("UserId") DO UPDATE SET "PassHash" = EXCLUDED."PassHash"`,
+      [user.Id, hash]
+    );
 
     return NextResponse.json({ success: true });
   } catch (error) {
