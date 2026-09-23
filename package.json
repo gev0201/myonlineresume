@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "start": "NODE_ENV=production node server.js",
+    "lint": "eslint",
+    "deploy:package": "node deploy-package.js"
   },
   "dependencies": {
     "@types/bcryptjs": "^2.4.6",
