@@ -39,3 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# cPanel deployment files (not needed for Vercel)
+deploy/
+deploy-fixed/
+*.zip
+app.js
+deploy-package.js
+deploy-package-fixed.js
+package-minimal.json
+
+# IDE
+.idea/
